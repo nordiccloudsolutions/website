@@ -2,4 +2,4 @@ baseURL = 'https://nordiccloudsolutions.com/'
 languageCode = 'en-us'
 publishDir = "docs"
 theme = 'ananke'
-title = 'Nordic Cloud Solutions'
+title = 'Nordic Cloud Solutions '
