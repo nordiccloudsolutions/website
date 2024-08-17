@@ -1,0 +1,4 @@
+baseURL = 'https://nordiccloudsolutions.com/'
+languageCode = 'en-us'
+theme = 'ananke'
+title = 'Nordic Cloud Solutions'
