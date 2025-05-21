@@ -25,6 +25,139 @@
   <meta name="twitter:title" content="Nordic Cloud Solutions">
   <meta name="twitter:description" content="Cloud strategy, infrastructure, and transformation for the Nordic enterprise.">
 
+  <style>
+    /* General form styling */
+    .contact-form {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Form sections */
+    .form-group {
+      margin-bottom: 24px;
+    }
+    
+    /* Labels */
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #333;
+      letter-spacing: 0.5px;
+    }
+    
+    /* Form inputs */
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 16px;
+      color: #333;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #357edd;
+      box-shadow: 0 0 0 3px rgba(53, 126, 221, 0.15);
+    }
+    
+    .form-group textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+    
+    /* Submit button */
+    .form-submit {
+      background-color: #357edd;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
+      min-width: 180px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-submit:hover {
+      background-color: #2b6cb0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .form-submit:active {
+      transform: translateY(0);
+    }
+    
+    /* Success message */
+    .success-message {
+      display: none;
+      color: #2e7d32;
+      margin-top: 24px;
+      padding: 16px;
+      background-color: #e8f5e9;
+      border-left: 4px solid #2e7d32;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    /* Form grid for name/email fields */
+    @media screen and (min-width: 640px) {
+      .form-row {
+        display: flex;
+        gap: 16px;
+      }
+      
+      .form-row .form-group {
+        flex: 1;
+      }
+    }
+    
+    /* Contact section styling */
+    .contact-section {
+      background: linear-gradient(to bottom, #fff, #f5f7fa);
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    
+    .section-header h2:after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: #357edd;
+    }
+  </style>
 </head>
 
 <body class="ma0 avenir bg-near-white">
@@ -33,6 +166,9 @@
     <nav class="pv3 ph3 ph4-ns" role="navigation" aria-label="Main Navigation">
       <div class="flex-l justify-between items-center center">
         <a href="/" class="f3 fw2 white-90 no-underline hover-white">Nordic Cloud Solutions</a>
+        <div class="flex-l items-center">
+          <a href="#contact" class="f5 fw4 white-70 no-underline hover-white mr4">Contact</a>
+        </div>
       </div>
     </nav>
 
@@ -57,8 +193,74 @@
       <h2 class="f3 fw4 dark-gray mt5">Why Nordic Cloud Solutions?</h2>
       <p>We combine deep technical expertise with a local understanding of the Nordic regulatory and business landscape. Whether you're moving to the cloud or optimizing your current setup, we help you stay competitive in a digital-first world.</p>
 
-      <a href="/contact/" class="f5 link dim ba ph3 pv2 mb2 dib dark-blue">Get in Touch</a>
+      <a href="#contact" class="f5 link dim ba ph3 pv2 mb2 dib dark-blue">Get in Touch</a>
     </article>
+    
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section mv5 pv5">
+      <div class="ph3 ph5-l">
+        <div class="section-header">
+          <h2 class="f2 fw4 dark-gray">Contact Us</h2>
+          <p class="f4 center measure-wide lh-copy mid-gray mb4">
+            Ready to accelerate your cloud journey? Fill out the form below and we'll get back to you within 24 hours.
+          </p>
+        </div>
+        
+        <div class="contact-form">
+          <!-- Replace YOUR_EMAIL@DOMAIN.COM with your actual email address -->
+          <form id="contactForm" action="https://formsubmit.co/darrenwrose@gmail.com" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@company.com">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Your organization">
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+46 XXX XXX XXX">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required placeholder="How can we help you?">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Tell us about your cloud requirements or challenges..."></textarea>
+            </div>
+            
+            <!-- FormSubmit configuration options -->
+            <input type="hidden" name="_subject" value="New inquiry from Nordic Cloud Solutions website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+            <!-- Replace with your thank you page URL or remove if not needed -->
+            <input type="hidden" name="_next" value="https://nordiccloudsolutions.com/thank-you/">
+            
+            <div class="tc">
+              <button type="submit" class="form-submit">Send Message</button>
+            </div>
+          </form>
+          
+          <div id="successMessage" class="success-message">
+            Your message has been sent! We'll be in touch shortly.
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="bg-black w-100 pa3" role="contentinfo">
@@ -68,5 +270,14 @@
     </div>
   </footer>
 
+  <script>
+    // This script handles the success message if you're not using the _next redirect
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('success')) {
+      document.getElementById('successMessage').style.display = 'block';
+      // Scroll to the message
+      document.getElementById('successMessage').scrollIntoView();
+    }
+  </script>
 </body>
 </html>
